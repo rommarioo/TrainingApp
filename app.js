@@ -44,7 +44,8 @@ function changeTime() {
   if (time === 0) {
     finish();
     setTimeout(() => {
-      location.reload(true);
+      // location.reload(true);
+      location = location;
     }, 4000);
   } else {
     let current = --time;
