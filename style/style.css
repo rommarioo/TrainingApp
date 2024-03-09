@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 1s ease-in;
+  color: white;
+  font-size: 40px;
+  background-color: rgb(58, 58, 58);
+}
+.up {
+  margin-top: -100vh;
+}
+.hide {
+  opacity: 0;
+}
+.board {
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: aliceblue;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 10px;
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: black;
+}
+.textColor {
+  color: black;
+}
+.start {
+  border: 1px solid white;
+  border-radius: 10%;
+  margin-top: 20px;
+  padding: 10px;
+}
+.start:hover {
+  background-color: rgb(166, 166, 166);
+  transition: background-color 2s;
+}
+.time-select-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-top: 20px;
+}
+.time-select-button {
+  background-color: rgb(137, 137, 137, 0);
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  font-size: 25px;
+}
+.time-select-button:hover {
+  color: rgb(182, 182, 182);
+  border: 1px solid rgb(182, 182, 182);
+  background-color: rgb(166, 166, 166);
+  transition: background-color 2s;
+}
+
+@media (max-width: 550px) {
+  .board {
+    width: 90vw;
+    height: 90vw;
+  }
+}
+@media (max-width: 400px) {
+  .screen {
+    font-size: 25px;
+  }
+  .time-select-button {
+    font-size: 15px;
+  }
+}
